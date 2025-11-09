@@ -156,11 +156,6 @@
                     <h3>Progression Tracking</h3>
                     <p>Automatic velocity, spin, and strike-rate trend reports that are ready for player meetings and recruiting packets.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔁</div>
-                    <h3>Plug-and-Play Integration</h3>
-                    <p>Secure OAuth connection to Trackman plus optional API export to your video, recruiting, or BI stack.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -240,21 +235,6 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <h2>Get Updates</h2>
-            <p>Sign up to get exclusive insights, new feature drops, and real examples of how top-tier programs are using the Developing Baseball portal to train better pitchers.</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Email" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-            <div class="newsletter-success" id="newsletterSuccess" style="display: none;">
-                Thanks for submitting!
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -263,7 +243,9 @@
                 <p class="section-subtitle">Book a walkthrough or get in touch</p>
             </div>
             <div class="contact-content">
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="bot-field">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -307,9 +289,9 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/developingbaseball" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://x.com/developbaseball" target="_blank" rel="noopener">Twitter / X</a></li>
+                        <li><a href="https://www.linkedin.com/company/developing-baseball/" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>

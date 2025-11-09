@@ -116,37 +116,6 @@ animateElements.forEach(el => {
     observer.observe(el);
 });
 
-// Newsletter Form Handling
-const newsletterForm = document.getElementById('newsletterForm');
-const newsletterSuccess = document.getElementById('newsletterSuccess');
-
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const email = this.querySelector('input[type="email"]').value;
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-        
-        // Here you would typically send the data to a server
-        console.log('Newsletter signup:', email);
-        
-        // Show success message
-        if (newsletterSuccess) {
-            newsletterSuccess.style.display = 'block';
-            this.style.display = 'none';
-        }
-        
-        // Reset form
-        this.reset();
-    });
-}
-
 // Add scroll progress indicator (optional)
 let scrollProgress = 0;
 
